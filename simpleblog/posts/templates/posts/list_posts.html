@@ -1,11 +1,14 @@
-<html>
-<head>
-</head>
-<body>
+{% extends "index.html" %}
+
+{% block title %}
+<h1>Listado de entradas</h1>
+{% endblock %}
+
+
+{% block content %}
 <ul>
 {% for post in posts %}
     <li><a href="{% url post_detail post.id %}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-</body>
-</html>
+{% endblock %}
